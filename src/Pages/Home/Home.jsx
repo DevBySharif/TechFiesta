@@ -1,10 +1,13 @@
 import Banner from "../../Component/Banner/Banner";
+import Services from "../Services/Services";
+import Vision from "../Vision/Vision";
 
 const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <h1>This is home</h1>
+      <Vision></Vision>
+      <Services></Services>
     </div>
   );
 };

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "image": "gaming_tournaments.jpg",
+    "title": "Gaming Tournaments",
+    "description": "Participate in exciting gaming tournaments with a chance to win prizes. Challenge your skills and compete against other gamers in a variety of game titles. Whether you're a casual player or a pro, our tournaments offer something for everyone. Join the gaming community and take home bragging rights!",
+    "price": "Varies per tournament"
+  },
+  {
+    "id": 2,
+    "image": "tech_workshops.jpg",
+    "title": "Tech Workshops",
+    "description": "Learn the latest tech skills through hands-on workshops and expert-led sessions. Dive into topics like programming, artificial intelligence, cybersecurity, and more. Our workshops provide a practical learning experience to help you stay ahead in the tech industry. Don't miss the opportunity to expand your knowledge!",
+    "price": "Starting at $49 per workshop"
+  },
+  {
+    "id": 3,
+    "image": "game_developer_conferences.jpg",
+    "title": "Game Developer Conferences",
+    "description": "Connect with industry professionals and gain insights into game development trends. Our conferences bring together game designers, developers, and enthusiasts to explore the latest innovations and strategies in the gaming world. Join us to network, learn, and shape the future of gaming.",
+    "price": "Starting at $199 for conference access"
+  },
+  {
+    "id": 4,
+    "image": "gaming_expo_booths.jpg",
+    "title": "Gaming Expo Booths",
+    "description": "Showcase your gaming products or services with an exhibition booth. Gain visibility among a passionate gaming audience. Our booth packages are designed to help you make a big impact at gaming events. Reserve your booth space today and connect with potential customers and partners.",
+    "price": "Booth packages starting at $499"
+  },
+  {
+    "id": 5,
+    "image": "tech_talks_and_panels.jpg",
+    "title": "Tech Talks and Panels",
+    "description": "Attend thought-provoking tech talks and panel discussions on emerging technologies. Stay informed about the latest trends in artificial intelligence, blockchain, cloud computing, and more. Our events feature expert speakers who share valuable insights and knowledge. View our schedule and secure your spot today!",
+    "price": "Free admission"
+  },
+  {
+    "id": 6,
+    "image": "gaming_cosplay_competition.jpg",
+    "title": "Gaming Cosplay Competition",
+    "description": "Show off your gaming-inspired costumes and compete in a cosplay contest. Whether you're dressed as a favorite video game character or a creative original design, our cosplay competition is the place to shine. Join fellow cosplayers and enthusiasts for a chance to win fantastic prizes.",
+    "price": "Entry fee of $20 per participant"
+  }
+]
