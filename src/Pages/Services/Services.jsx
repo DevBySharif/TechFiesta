@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Details from "./Details";
+import Service from "./Service";
 
 const Services = () => {
   const [servicesData, setServicesData] = useState([]);
@@ -15,8 +15,8 @@ const Services = () => {
       <h1 className="text-5xl font-bold text-center">Our Services</h1>
       <p className="text-center">we have many services</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {servicesData.map((service) => (
-          <Details key={service.id} service={service}></Details>
+        {servicesData?.map((service) => (
+          <Service key={service.id} service={service}></Service>
         ))}
       </div>
     </div>
