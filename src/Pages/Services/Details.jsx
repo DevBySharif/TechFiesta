@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const Details = ({ service }) => {
   const { title, description, image, price } = service;
   console.log(title);
@@ -18,4 +19,7 @@ const Details = ({ service }) => {
   );
 };
 
+Details.propTypes = {
+  Service: PropTypes.object.isRequired,
+};
 export default Details;
