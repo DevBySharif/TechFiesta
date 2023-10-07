@@ -1,4 +1,4 @@
-const Events = () => {
+const MyEvents = () => {
   return (
     <div>
       <h1>This is events</h1>
@@ -6,4 +6,4 @@ const Events = () => {
   );
 };
 
-export default Events;
+export default MyEvents;

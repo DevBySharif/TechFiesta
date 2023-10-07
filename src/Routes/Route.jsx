@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layout/Root";
-import Events from "../Pages/Events/Events";
+import DashBoard from "../Pages/Dashboard/DashBoard";
+import Events from "../Pages/Events/MyEvents";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
@@ -35,8 +36,20 @@ const Route = createBrowserRouter([
         ),
       },
       {
+        path: "/dashboard",
+        element: (
+          <PrivateRoute>
+            <DashBoard></DashBoard>
+          </PrivateRoute>
+        ),
+      },
+      {
         path: "/events",
-        element: <Events></Events>,
+        element: (
+          <PrivateRoute>
+            <Events></Events>
+          </PrivateRoute>
+        ),
       },
     ],
   },
