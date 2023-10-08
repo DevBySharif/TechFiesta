@@ -1,24 +1,47 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const [registerError, setRegisterError] = useState("");
+  const [registrationSuccess, setRegistrationSuccess] = useState("");
 
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+    const accepted = e.target.terms.checked;
     console.log(name, email, password);
+
+    setRegisterError("");
+    setRegistrationSuccess("");
+
+    if (password.length < 6) {
+      setRegisterError("Password should be at least 6 character or longer");
+      return;
+    } else if (
+      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/.test(
+        password
+      )
+    ) {
+      setRegisterError(
+        "Your password should have at least one uppercase letter, one lowercase letter, one number and one special character "
+      );
+      return;
+    } else if (!accepted) {
+      setRegisterError("Please accept our terms and condition");
+      return;
+    }
 
     // create user
     createUser(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
+        setRegistrationSuccess("User Created Successfully");
       })
       .catch((error) => {
-        console.log(error);
+        setRegisterError(error.message);
       });
   };
   return (
@@ -71,9 +94,19 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="form-control mt-6">
-              <button className="btn btn-primary">Register</button>
+            <div>
+              <input type="checkbox" name="terms" />
+              <label className="ml-3" htmlFor="">
+                Please accept our <a href="">terms and conditions</a>
+              </label>
             </div>
+            <div className="form-control mt-6">
+              <button className="btn btn-neutral">Register</button>
+            </div>
+            {registerError && <p className="text-red-500">{registerError}</p>}
+            {registrationSuccess && (
+              <p className="text-green-500">{registrationSuccess}</p>
+            )}
             <p>
               Already have an account? <Link to="/login">Login</Link>
             </p>

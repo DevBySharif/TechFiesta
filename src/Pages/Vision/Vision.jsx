@@ -2,7 +2,7 @@ import visionBg from "../../assets/visionb1.jpg";
 
 const Vision = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-5 gap-10 px-6 items-center mt-12 border justify-center">
+    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-5 gap-10 px-6 items-center my-12 border justify-center">
       <div
         className="col-span-2 border rounded-lg h-full"
         style={{

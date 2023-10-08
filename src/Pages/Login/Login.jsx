@@ -1,12 +1,17 @@
-import { useContext } from "react";
+import { sendPasswordResetEmail } from "firebase/auth";
+import { useContext, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import auth from "../../Firebase/firebase.config";
 import { AuthContext } from "../../Provider/AuthProvider";
 import SocialLogin from "../../SocialLogin/SocialLogin";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
+  const [loginError, setLoginError] = useState("");
+  const [loginSuccess, setLoginSuccess] = useState("");
+  const emailRef = useRef(null);
+
   const location = useLocation();
-  console.log(location);
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -15,10 +20,33 @@ const Login = () => {
     const password = e.target.password.value;
     console.log(email, password);
 
+    setLoginError("");
+    setLoginSuccess("");
+
     signIn(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
+        setLoginSuccess("Login successful");
         navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        setLoginError(error.message);
+      });
+  };
+
+  const handleForgetPassword = () => {
+    const email = emailRef.current.value;
+
+    if (!email) {
+      console.log("Please input your email", email);
+      return;
+    } else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
+      console.log("Please write a valid email");
+      return;
+    }
+
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        alert("Please check your email");
       })
       .catch((error) => {
         console.log(error);
@@ -46,6 +74,7 @@ const Login = () => {
                 type="email"
                 placeholder="Email"
                 name="email"
+                ref={emailRef}
                 className="input input-bordered"
                 required
               />
@@ -62,16 +91,24 @@ const Login = () => {
                 required
               />
               <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
+                <a
+                  onClick={handleForgetPassword}
+                  href="#"
+                  className="label-text-alt link link-hover"
+                >
                   Forgot password?
                 </a>
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn btn-neutral">Login</button>
             </div>
+
+            {loginError && <p className="text-red-500">{loginError}</p>}
+            {loginSuccess && <p className="text-green-500">{loginSuccess}</p>}
+
             <p>
-              Don't have acoount? <Link to="/register">Register</Link>
+              Don't have an account? <Link to="/register">Register</Link>
             </p>
             <SocialLogin></SocialLogin>
           </form>
