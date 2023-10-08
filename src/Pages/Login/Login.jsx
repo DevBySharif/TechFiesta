@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../Component/Navbar/Navbar";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -8,7 +9,6 @@ import loginImg from "../../assets/login.gif";
 const Login = () => {
   const { signIn } = useContext(AuthContext);
   const [loginError, setLoginError] = useState("");
-  const [loginSuccess, setLoginSuccess] = useState("");
   // const emailRef = useRef(null);
 
   const location = useLocation();
@@ -18,14 +18,12 @@ const Login = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
 
     setLoginError("");
-    setLoginSuccess("");
 
     signIn(email, password)
       .then(() => {
-        setLoginSuccess("Login successful");
+        toast.success("Login successful");
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
@@ -104,7 +102,6 @@ const Login = () => {
               </div>
 
               {loginError && <p className="text-red-500">{loginError}</p>}
-              {loginSuccess && <p className="text-green-500">{loginSuccess}</p>}
 
               <p>
                 Don't have an account? <Link to="/register">Register</Link>
