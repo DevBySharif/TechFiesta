@@ -10,14 +10,15 @@ const Banner = () => {
     >
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
-        <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-          <p className="mb-5">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+        <div className="max-w-md text-white">
+          <h1 className="mb-5 text-5xl font-bold font-Bebas">
+            <span className="text-pink-500">TechFiesta</span> : Where Tech and
+            Gaming Collide!
+          </h1>
+          <p className="mb-5 text-white text-lg">
+            Your Gateway to Thrilling Tournaments and Cutting-Edge Tech.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <button className="btn btn-secondary">Explore Events</button>
         </div>
       </div>
     </div>

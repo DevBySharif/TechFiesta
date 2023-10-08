@@ -1,7 +1,9 @@
 const MyEvents = () => {
   return (
     <div>
-      <h1>This is events</h1>
+      <h1 className="text-5xl font-Bebas font-bold flex justify-center my-12">
+        Your recent Events
+      </h1>
     </div>
   );
 };

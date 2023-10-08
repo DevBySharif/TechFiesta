@@ -12,27 +12,39 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink className="text-white font-semibold" to="/">
+        <NavLink className="lg:text-white text-black font-semibold" to="/">
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink className="text-white font-semibold" to="/vision">
+        <NavLink
+          className="lg:text-white text-black font-semibold"
+          to="/vision"
+        >
           Vision
         </NavLink>
       </li>
       <li>
-        <NavLink className="text-white font-semibold" to="/services">
+        <NavLink
+          className="lg:text-white text-black font-semibold"
+          to="/services"
+        >
           Services
         </NavLink>
       </li>
       <li>
-        <NavLink className="text-white font-semibold" to="/events">
+        <NavLink
+          className="lg:text-white text-black font-semibold"
+          to="/events"
+        >
           My Events
         </NavLink>
       </li>
       <li>
-        <NavLink className="text-white font-semibold" to="/dashboard">
+        <NavLink
+          className="lg:text-white text-black font-semibold"
+          to="/dashboard"
+        >
           Dashboard
         </NavLink>
       </li>
@@ -66,7 +78,10 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost normal-case text-white text-xl">
+        <Link
+          to="/"
+          className="btn btn-ghost normal-case text-white font-extrabold text-2xl"
+        >
           TechFiesta
         </Link>
       </div>

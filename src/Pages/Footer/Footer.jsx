@@ -4,15 +4,15 @@ const Footer = () => {
       <nav>
         <header className="footer-title">Services</header>
         <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
+        <a className="link link-hover">Tournaments</a>
+        <a className="link link-hover">Workshops</a>
+        <a className="link link-hover">Conferences</a>
       </nav>
       <nav>
-        <header className="footer-title">Company</header>
+        <header className="footer-title">TechFiesta</header>
         <a className="link link-hover">About us</a>
         <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
+        <a className="link link-hover">Events</a>
         <a className="link link-hover">Press kit</a>
       </nav>
       <nav>
