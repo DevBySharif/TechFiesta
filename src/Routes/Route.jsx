@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layout/Root";
 import DashBoard from "../Pages/Dashboard/DashBoard";
+import Error from "../Pages/ErrorPage/Error";
 import Events from "../Pages/Events/MyEvents";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
@@ -14,6 +15,7 @@ const Route = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -34,6 +36,7 @@ const Route = createBrowserRouter([
             <ServiceDetails></ServiceDetails>
           </PrivateRoute>
         ),
+        loader: () => fetch("/data.json"),
       },
       {
         path: "/dashboard",

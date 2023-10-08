@@ -1,7 +1,7 @@
 const TechFiestaByNumbers = () => {
   return (
     <div className="mt-12">
-      <h1 className="text-5xl font-bold font-Raleway mb-4 text-center">
+      <h1 className="text-5xl font-bold font-Bebas mb-4 text-center">
         TechFiesta By Numbers
       </h1>
       <div className="flex justify-center mb-12">
