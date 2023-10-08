@@ -4,6 +4,9 @@ const Vision = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-5 lg:gap-20 lg:px-6 items-center my-12 border justify-center">
       <div
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
         className="col-span-3 border rounded-lg h-full"
         style={{
           backgroundImage: `url(${visionBg})`,
@@ -23,7 +26,10 @@ const Vision = () => {
         </p>
       </div>
       <div className="grid lg:grid-rows-4 lg:grid-flow-col md:grid-cols-2 md:gap-3 ">
-        <div className="card w-96 bg-neutral text-neutral-content lg:row-start-1">
+        <div
+          className="card w-96 bg-neutral text-neutral-content lg:row-start-1"
+          data-aos="flip-left"
+        >
           <div className="card-body items-center text-center">
             <h2 className="text-2xl font-semibold mb-2">Event Planning</h2>
             <p className="font-Raleway">
@@ -35,7 +41,10 @@ const Vision = () => {
             <hr className="h-1 bg-white w-60" />
           </div>
         </div>
-        <div className="card w-96 bg-neutral text-neutral-content lg:row-end-4">
+        <div
+          className="card w-96 bg-neutral text-neutral-content lg:row-end-4"
+          data-aos="flip-right"
+        >
           <div className="card-body items-center text-center">
             <h2 className="text-2xl font-semibold mb-2">
               Competitions and Tournaments
@@ -49,7 +58,10 @@ const Vision = () => {
           </div>
         </div>
 
-        <div className="card w-96 bg-neutral text-neutral-content lg:row-start-2">
+        <div
+          className="card w-96 bg-neutral text-neutral-content lg:row-start-2"
+          data-aos="flip-up"
+        >
           <div className="card-body items-center text-center">
             <h2 className="text-2xl font-semibold mb-2">
               Exhibition and Showcases
@@ -64,7 +76,10 @@ const Vision = () => {
             <hr className="h-1 bg-white w-60" />
           </div>
         </div>
-        <div className="card w-96 bg-neutral text-neutral-content lg:row-end-5">
+        <div
+          className="card w-96 bg-neutral text-neutral-content lg:row-end-5"
+          data-aos="flip-down"
+        >
           <div className="card-body items-center text-center">
             <h2 className="text-2xl font-semibold mb-2">
               Networking Opportunities

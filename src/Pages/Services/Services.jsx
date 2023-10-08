@@ -11,7 +11,7 @@ const Services = () => {
   }, []);
   console.log(servicesData);
   return (
-    <div className="mt-12 px-4">
+    <div className="mt-12 px-4" data-aos="flip-up">
       <h1 className="text-6xl font-bold text-center font-Bebas">
         Our Services
       </h1>
