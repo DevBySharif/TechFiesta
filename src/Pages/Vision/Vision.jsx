@@ -2,12 +2,12 @@ import visionBg from "../../assets/visionb1.jpg";
 
 const Vision = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-5 lg:gap-20 lg:px-6 items-center my-12 border justify-center">
+    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-5 lg:gap-20 lg:px-6 items-center my-12 justify-center">
       <div
         data-aos="fade-right"
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
-        className="col-span-3 border rounded-lg h-full"
+        className="col-span-3  rounded-lg h-full"
         style={{
           backgroundImage: `url(${visionBg})`,
           backgroundRepeat: "no-repeat",

@@ -1,6 +1,6 @@
 **Project Name:** TechFiesta - Tech and Gaming Events Management
 
-**Live Link:** [TechFiesta Live](live link)
+**Live Link:** [TechFiesta Live](https://techfiesta-1e8dd.web.app)
 
 **Key Features:**
 
