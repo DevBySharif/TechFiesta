@@ -102,8 +102,11 @@ const Register = () => {
             {registrationSuccess && (
               <p className="text-green-500">{registrationSuccess}</p>
             )}
-            <p>
-              Already have an account? <Link to="/login">Login</Link>
+            <p className="flex justify-between">
+              Already have an account?{" "}
+              <Link className="text-blue-600" to="/login">
+                Login
+              </Link>
             </p>
             <SocialLogin></SocialLogin>
           </form>

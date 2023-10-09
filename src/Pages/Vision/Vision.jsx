@@ -2,12 +2,12 @@ import visionBg from "../../assets/visionb1.jpg";
 
 const Vision = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-5 lg:gap-20 lg:px-6 items-center my-12 justify-center">
+    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-5 lg:gap-28 lg:px-6 items-center my-12 justify-between max-w-[100vw]">
       <div
         data-aos="fade-right"
-        data-aos-offset="300"
+        data-aos-offset="200"
         data-aos-easing="ease-in-sine"
-        className="col-span-3  rounded-lg h-full"
+        className="col-span-2  rounded-lg h-full p-4 mb-4"
         style={{
           backgroundImage: `url(${visionBg})`,
           backgroundRepeat: "no-repeat",
@@ -25,9 +25,9 @@ const Vision = () => {
           both professionals and amateurs alike.
         </p>
       </div>
-      <div className="grid lg:grid-rows-4 lg:grid-flow-col md:grid-cols-2 md:gap-3 ">
+      <div className="grid lg:grid-rows-4 lg:grid-flow-col md:grid-cols-2 md:gap-3 gap-3 justify-center col-span-3 ">
         <div
-          className="card w-96 bg-neutral text-neutral-content lg:row-start-1"
+          className="card  bg-neutral text-neutral-content lg:row-start-1"
           data-aos="flip-left"
         >
           <div className="card-body items-center text-center">
@@ -42,7 +42,7 @@ const Vision = () => {
           </div>
         </div>
         <div
-          className="card w-96 bg-neutral text-neutral-content lg:row-end-4"
+          className="card  bg-neutral text-neutral-content lg:row-end-4"
           data-aos="flip-right"
         >
           <div className="card-body items-center text-center">
@@ -59,7 +59,7 @@ const Vision = () => {
         </div>
 
         <div
-          className="card w-96 bg-neutral text-neutral-content lg:row-start-2"
+          className="card  bg-neutral text-neutral-content lg:row-start-2"
           data-aos="flip-up"
         >
           <div className="card-body items-center text-center">
@@ -77,7 +77,7 @@ const Vision = () => {
           </div>
         </div>
         <div
-          className="card w-96 bg-neutral text-neutral-content lg:row-end-5"
+          className="card bg-neutral text-neutral-content lg:row-end-5"
           data-aos="flip-down"
         >
           <div className="card-body items-center text-center">

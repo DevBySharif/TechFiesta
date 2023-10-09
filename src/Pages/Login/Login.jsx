@@ -103,8 +103,11 @@ const Login = () => {
 
               {loginError && <p className="text-red-500">{loginError}</p>}
 
-              <p>
-                Don't have an account? <Link to="/register">Register</Link>
+              <p className="flex justify-between">
+                Don't have an account?{" "}
+                <Link className="text-blue-600" to="/register">
+                  Register
+                </Link>
               </p>
               <SocialLogin></SocialLogin>
             </form>

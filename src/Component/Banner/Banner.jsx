@@ -6,6 +6,7 @@ const Banner = () => {
       className="hero min-h-screen"
       style={{
         backgroundImage: `url(${banner})`,
+        backgroundSize: "cover",
       }}
     >
       <div className="hero-overlay bg-opacity-60"></div>
